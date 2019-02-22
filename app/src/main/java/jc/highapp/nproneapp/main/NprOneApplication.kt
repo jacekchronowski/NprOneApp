@@ -12,5 +12,4 @@ class NprOneApplication : Application(), KodeinAware {
         bind<LoginPresenter>() with provider { LoginPresenter() }
     }
 
-
 }
