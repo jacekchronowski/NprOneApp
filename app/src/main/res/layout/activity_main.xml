@@ -9,13 +9,15 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
+        android:layout_above="@+id/bottom_navigation_bar"
+        android:layout_alignParentTop="true"
         android:layout_height="wrap_content" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+        android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_navigation_height"
-        android:layout_gravity="start"
-        app:menu="@menu/my_navigation_items" />
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>

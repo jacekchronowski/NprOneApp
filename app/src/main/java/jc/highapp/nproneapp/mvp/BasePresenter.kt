@@ -1,4 +1,4 @@
-package jc.highapp.nproneapp.main
+package jc.highapp.nproneapp.mvp
 
 import io.reactivex.disposables.CompositeDisposable
 

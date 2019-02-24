@@ -19,8 +19,8 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "APPLICATION_ID", keystoreProperties["APPLICATION_ID"]
-        buildConfigField "String", "APPLICATION_SECRET", keystoreProperties["APPLICATION_SECRET"]
+        buildConfigField "String", "NPR_APPLICATION_ID", keystoreProperties["APPLICATION_ID"]
+        buildConfigField "String", "NPR_APPLICATION_SECRET", keystoreProperties["APPLICATION_SECRET"]
     }
     buildTypes {
         release {
@@ -40,6 +40,9 @@ dependencies {
     implementation 'org.kodein.di:kodein-di-framework-android-x:6.1.0'
     implementation "io.reactivex.rxjava2:rxjava:2.2.6"
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.android.support:support-compat:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
 
     testImplementation 'junit:junit:4.12'
 
