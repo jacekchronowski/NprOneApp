@@ -1,6 +1,6 @@
 package jc.highapp.nproneapp.login.interactor
 
-import jc.highapp.nproneapp.util.Constants
+import jc.highapp.nproneapp.constants.Constants
 
 class LoginOverrideUrlInteractor {
     fun execute(url : String?) : Boolean {

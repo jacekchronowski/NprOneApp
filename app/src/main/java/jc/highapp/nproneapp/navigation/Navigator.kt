@@ -6,6 +6,8 @@ import jc.highapp.nproneapp.R
 import jc.highapp.nproneapp.login.view.LoginFragment
 import jc.highapp.nproneapp.main.MainActivity
 import jc.highapp.nproneapp.splash.view.SplashFragment
+import jc.highapp.nproneapp.util.replaceFragment
+import jc.highapp.nproneapp.util.replaceFragmentOnTop
 import kotlinx.android.synthetic.main.activity_main.*
 
 class Navigator {
@@ -21,11 +23,7 @@ class Navigator {
     }
 
     fun showLoginScreen() {
-        activity?.supportFragmentManager
-            ?.beginTransaction()
-            ?.replace(R.id.fragment_container, LoginFragment(), LoginFragment::class.java.simpleName)
-            ?.addToBackStack(LoginFragment::class.java.simpleName)
-            ?.commit()
+        activity?.replaceFragment(LoginFragment())
     }
 
     fun showBottomNavigationBar() {
@@ -37,11 +35,7 @@ class Navigator {
     }
 
     fun showSplashScreen() {
-        activity?.supportFragmentManager
-            ?.beginTransaction()
-            ?.replace(R.id.fragment_container, SplashFragment(), SplashFragment::class.java.simpleName)
-            ?.addToBackStack(LoginFragment::class.java.simpleName)
-            ?.commit()
+        activity?.replaceFragmentOnTop(SplashFragment())
     }
 
     fun showMainScreen() {

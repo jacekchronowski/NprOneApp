@@ -28,4 +28,8 @@ class LoginPresenter(
         }
     }
 
+    fun onLoginPageLoadingFinished() {
+        view?.startSplashHideAnimation()
+    }
+
 }

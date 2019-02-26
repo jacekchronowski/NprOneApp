@@ -1,7 +1,7 @@
 package jc.highapp.nproneapp.login.interactor
 
 import jc.highapp.nproneapp.BuildConfig
-import jc.highapp.nproneapp.util.Constants
+import jc.highapp.nproneapp.constants.Constants
 import jc.highapp.nproneapp.util.utf8Decode
 import okhttp3.HttpUrl
 

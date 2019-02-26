@@ -15,7 +15,7 @@ abstract class BaseFragment<V : BaseView, P : BasePresenter<V>> : Fragment(), Ko
     protected abstract val presenter : P
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(layoutResId, container, false);
+        val view = inflater.inflate(layoutResId, container, false)
         presenter.attachView(this as V)
         presenter.onCreateView()
         return view

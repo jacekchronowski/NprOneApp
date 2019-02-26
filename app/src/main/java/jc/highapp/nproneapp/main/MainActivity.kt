@@ -13,14 +13,12 @@ import org.kodein.di.generic.instance
 class MainActivity : AppCompatActivity(), KodeinAware {
 
     override val kodein: Kodein by lazy { (applicationContext as KodeinAware).kodein }
-    override val kodeinTrigger = KodeinTrigger()
 
     private val navigator : Navigator by instance()
     private val router : LoginRouter by instance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        kodeinTrigger.trigger()
         setContentView(R.layout.activity_main)
         navigator.bindRoot(this)
         router.startFlow()

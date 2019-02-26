@@ -1,4 +1,4 @@
-package jc.highapp.nproneapp.util
+package jc.highapp.nproneapp.constants
 
 class Constants {
 
@@ -18,6 +18,7 @@ class Constants {
         const val SCOPE_LISTENING_READ_ONLY: String = "listening.readonly"
         const val SCOPE_LISTENING_WRITE: String = "listening.write"
         const val SCOPE_LOCALACTIVATION: String = "localactivation"
+        const val WEBVIEW_USER_AGENT: String = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
 
     }
 }
