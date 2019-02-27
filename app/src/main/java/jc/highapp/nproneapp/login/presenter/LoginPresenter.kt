@@ -4,12 +4,13 @@ import jc.highapp.nproneapp.login.interactor.LoginOverrideUrlInteractor
 import jc.highapp.nproneapp.login.interactor.LoginUrlInteractor
 import jc.highapp.nproneapp.login.view.LoginView
 import jc.highapp.nproneapp.mvp.BasePresenter
-import jc.highapp.nproneapp.routers.login.LoginRouter
+import jc.highapp.nproneapp.login.router.LoginRouter
 
 class LoginPresenter(
     private val loginUrlInteractor: LoginUrlInteractor,
     private val loginOverrideUrlInteractor: LoginOverrideUrlInteractor,
-    private val loginRouter: LoginRouter) : BasePresenter<LoginView>() {
+    private val loginRouter: LoginRouter
+) : BasePresenter<LoginView>() {
 
     override fun onInit() {
         view?.initWebView()
@@ -21,11 +22,8 @@ class LoginPresenter(
     }
 
     fun onOverrideUrlLoading(url: String?) {
-        if(loginOverrideUrlInteractor.execute(url)) {
-            loginRouter.showScreenAfterLogin()
-        } else {
+        loginOverrideUrlInteractor.execute(url)
 
-        }
     }
 
     fun onLoginPageLoadingFinished() {

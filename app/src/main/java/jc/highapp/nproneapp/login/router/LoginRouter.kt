@@ -1,4 +1,4 @@
-package jc.highapp.nproneapp.routers.login
+package jc.highapp.nproneapp.login.router
 
 import jc.highapp.nproneapp.navigation.Navigator
 

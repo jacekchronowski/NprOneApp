@@ -4,10 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import jc.highapp.nproneapp.R
 import jc.highapp.nproneapp.navigation.Navigator
-import jc.highapp.nproneapp.routers.login.LoginRouter
+import jc.highapp.nproneapp.login.router.LoginRouter
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
-import org.kodein.di.KodeinTrigger
 import org.kodein.di.generic.instance
 
 class MainActivity : AppCompatActivity(), KodeinAware {
